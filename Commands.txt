@@ -1,0 +1,94 @@
+1) Versioning The Project : ( Create local git repo Either from Server or for project residing on local machine)
+
+  -> From local : git init
+
+  -> from Remote(existing) : git clone <url>
+
+
+2) Get Overview of changes : 
+
+  -> git status   ( locally ) 
+
+
+3) Staging & Commiting : 
+
+  -> git add <filenames_to_includes_by_space>
+
+     git add -A  ( all files ) 
+
+     git rm <filename_to_remove>
+
+     git commit 
+
+     git commit -m "commit Message Here" 
+
+     git log   ( display commit history )
+
+
+4) branching : 
+
+  -> git branch <branch_name>   ( create new local branch with branch_name from current branch )
+
+     git branch       ( list all branches in current project ) 
+ 
+     git branch -a    ( list all branches local as well as remote ) 
+
+     git branch -v    ( some more additional info. with branch name ) 
+
+     git branch -va   ( list of all branches involving both local & remote with some more additional info. )
+
+     git branch -d <branch_name>  ( delete branch with given branch_name locally )
+
+
+5) Stashing : 
+
+  -> git stash 
+
+     git stash list
+
+     git stash pop    ( apply newest stash and remove that from stash list ) 
+
+     git stash apply <stashname>   ( stash will remain saved in clipboard ) 
+
+
+6) Checkout & Merge : 
+  
+  -> git checkout <branch_name>  ( switch to newly created branch ) 
+  
+  -> git merge <branch_name_to_merge_in_current_working_copy_or_head_branch>
+
+
+7) Connecting Remote Repo : 
+
+  -> git remote add <remote_repo_name>  ( will create new remote repo on server i.e github ) 
+
+     					(*NOTE : Only relation will be created , & no data will be exchanged by above cmd )
+
+  -> git fetch <remote_repo_name>       ( Now data will be exchanged ) 
+
+
+8) Working on remote branch :
+
+  -> git checkout --track <remote_repo_name>/<remote_branch_name>
+
+     git push <remote_repo_name> <remoteRepo_branch_name>  ( push changes on remote server ) 
+
+     git push    ( If remote branch has been tracked already )  
+
+     git pull    ( If remote branch has been tracked already )  
+
+     git pull <remote_repo_name> <remoteRepo_branch_name>  ( pull changes from remote server ) 
+
+     git push <origin> --delete <branch_name_to_be_deleted_on_remote> ( delete branch on remote )  
+
+
+9) Publish a local branch :
+  
+  -> git push -u <origin> <remote_branch_name_to_be_created>  ( publish current local head to reote origin under name given in parameter )
+
+                     ( The "-u" flag establishes a tracking connection between that newly created branch on the remote and our local "contact-form" branch )
+         
+                     ( tracking relationship can be seen in square brackets in git branch command ) 
+
+
+ 

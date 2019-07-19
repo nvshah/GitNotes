@@ -1,0 +1,159 @@
+#BuzzWords For Git
+
+* What is Git ?
+  ____________
+
+-> Distributed VCS (Virsion Control system).
+  
+   #Version Control : database that let you have snaps of your works at any time.
+
+   #Repository      : kind of db that stores all versions  and metadata of Project 
+                      (.git folder in root directory of Project) 
+
+   #Working Copy    : Root Folder of Project is called WC. 
+
+  
+* local & Remote Repo : 
+  ____________________
+  
+  local - .git folder on your local machine
+ 
+  remote - .git folder on one server (i.e Github) use to share versions between project's Users.
+
+
+* Types of Files in Git :
+  ______________________
+
+  1) untracked : files not under VCS   ( not watch for change to such files )
+
+  2) tracked   : files under VCS       ( watch for changes so as to allow or discard )  
+
+
+* Commit & Staging : 
+  ________________
+
+  -> save new image of project : ( 2 steps ) 
+
+     1. Staging : decide which local changes of track files to proceed in next commit.
+
+     2. commit :  Wraps up image of project at particular time that includes changes invloved in staging.
+
+* Branch :
+  ________
+
+  -> master branch is created automatically when we start the project.
+
+  -> currently active or HEAD branch is addressed by * (asterisk)
+
+  Types of branches : 
+
+  1. Short-lived/Topic branches  : ( for new feature or bugfix)
+
+  2. long-running branches 
+
+ 
+REMEMBER : keep local and remote branch in sync i.e same naming convention at both side.
+
+
+* Save Changes Temporarily (stashing) :
+  _________________________
+
+  -> get changes save temporary and have a clean working copy for another work.
+
+  -> take all changes from working copy and save them on clipboard. & there are no more local changes left out.
+
+     Later You can restore those changes at any time. 
+
+
+     Applying stash : newest stash will always at the top of list.
+
+
+* Merge Changes :
+  ______________
+
+  The target of such merging or integration is always current HEAD branch/Working Copy
+
+  2 step process : ( locally ) 
+
+     1. Check out the branch that should receive the changes.
+
+     2. Call the "git merge" command with the name of the branch that contains the desired changes.
+
+  Merge Conflicts : 
+  ----------------
+    In some cases on merging, 'merge conflicts' will be resulted.
+
+  merge commit : combine changes of two branch that needed to be merged into new, seperate commit called as merge commit.
+  ------------
+
+
+* Remote Repositories : 
+  ____________________
+
+  -> diff between local & remote repository :
+
+     - working directory ( where some versions of project is checkout for you to work ) is not present in remote repo.
+
+  -> only means for sharing & exchanging codes between developers.
+
+  => Creating Remote Repo :
+     ---------------------
+  
+     - 1. alreday have local repo and if you want to base it on as remote repo. ( with --bare option) 
+
+       2. create blank remote repo ( with --bare option ) 
+  
+
+* Connecting Remote Repo : 
+  ______________________
+
+  1) when clone from remote repo : git save this connection as remote called "origin" by default
+
+  2) But if you started with fresh local copy ( & its versioning locally ) , manually need to connect to new remote 
+ 
+     inorder to have remote interactions.
+
+
+  Getting Remote Snap : 
+  --------------------
+
+  -> tell explicitly to get update from remote  ( for that fetch command is used ) 
+
+     Fetch : It will just download data from remote & not change any of local branch .
+
+
+  Once Connected, you want to work on remote branch.
+
+  To work on remote branch , you must create local branch that's based on this remote branch .
+  --------------------------------------------------------------------------------------------
+
+   -> for that you need to checkout the remote branch :
+
+      checkout : to have same branch name as remote and also to point head to this new local branch created from remote.
+
+      track : to keep track with remote branch so as to inform either one of branch consist commit that another doesn't have.
+
+      
+  Sharing Changes with Server : 
+  ---------------------------
+
+  - git push : 
+    _________
+
+    -> commits all new commits from head branch ( local ) to its remote CounterPart branch.
+    
+    -> It requires 2 specification ( if not tracked ) : remote repo & branch on remote repo
+
+
+  - git pull : 
+    _________
+
+    -> Integrates changes from remote server to local branch or working copy
+
+    -> It requires 2 specification ( if not tracked ) : remote repo & branch on remote repo 
+
+
+* Publishing a local branch : 
+  __________________________
+
+  To share branch created on your local machine to remote. i.e to push that branch on remote  
