@@ -102,7 +102,26 @@ REMEMBER : keep local and remote branch in sync i.e same naming convention at bo
      - 1. alreday have local repo and if you want to base it on as remote repo. ( with --bare option) 
 
        2. create blank remote repo ( with --bare option ) 
-  
+
+     
+     Q What is bare Git Repository ?
+
+     ->  There are 2 commands i.e git init & git init --bare.
+
+        git init : The directory in which you do this will be become the Working Tree for the repository.
+               
+                   git creates a .git directory ( brain of the repository ). its where Git tracks changes, commits,
+                   
+                   refs, etc.
+
+
+        git init --bare : repository that is created without Working Tree
+ 
+                          its content is same as typically content present in .git repository ( created using git init command)
+
+                          it is typically used as remote repository
+
+                   
 
 * Connecting Remote Repo : 
   ______________________
@@ -157,3 +176,69 @@ REMEMBER : keep local and remote branch in sync i.e same naming convention at bo
   __________________________
 
   To share branch created on your local machine to remote. i.e to push that branch on remote  
+
+
+* Fixing the very last commit :
+  ___________________________
+
+  --amend flag of git commit command
+
+  You can 1. correct last commit message.   ( without staging latest changes )
+ 
+          2. add some more changes to the last commit.   
+
+
+* Undo to Previous Changes : 
+  ___________________________
+
+  -> undoing local changes : undoing changes that haven't been yet committed
+
+  -> undoing committed changes : 
+ 
+     1. git revert 
+
+     2. git reset : neither produce new commit nor it delete old ones. 
+
+                    It reset current HEAD branch to Older version
+
+
+  NOTE : Both commands, revert and reset, only affect your current HEAD branch.
+
+
+*  Dealing with Merge Conflicts :
+   _____________________________
+
+   -> Arise when 
+
+      Change in same line in same file took place
+
+       - delete of file from one user and modification of file by another
+
+       - both add a file with same name
+
+   -> Use dedicated merge tool in case of conflict
+
+
+   Undo a merge : 
+   _____________
+
+   -> git merge --abort
+
+      git reset --hard
+
+
+* Merge Commits :
+  ________________
+
+  -> Its get created automatically by git
+
+  -> its purpose is to connect 2 branches, just as knot
+
+
+* Rebasing : 
+  _________
+ 
+  -> looks like development happened in straight line because merge commit works as if it was linear development betn 2 branch
+
+ 
+  

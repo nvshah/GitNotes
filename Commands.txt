@@ -60,7 +60,7 @@
 
 7) Connecting Remote Repo : 
 
-  -> git remote add <remote_repo_name>  ( will create new remote repo on server i.e github ) 
+  -> git remote add <remote_repo_name>  ( will create new relation with existing remote repo on server i.e github ) 
 
      					(*NOTE : Only relation will be created , & no data will be exchanged by above cmd )
 
@@ -91,4 +91,31 @@
                      ( tracking relationship can be seen in square brackets in git branch command ) 
 
 
+10) Undoing changes :
+
+   -> git commit --amend -m <"This is Correct commit message">
  
+   -> git checkout HEAD <path_to_file_to_be_restored_to_its_last_commited_version>  ( To restore file to its last commited version ) 
+
+                                                                                    ( it will discard any uncommited local changes in the file ) 
+
+   -> git reset --hard HEAD  ( replace files in Working Copy with Head i.e last commited revision ) 
+               
+                             ( --hard will discard all local changes ) 
+
+   -> git revert <hash_of_the_commit_you_want_to_revert_to>
+
+   -> git reset --hard <hash_of_the_commit_you_want_to_revert_to>    ( --hard will discard all local changes ) 
+
+   -> git merge --abort  ( return to state before starting merge )
+
+   -> git reset --hard
+
+
+11) Rebasing : 
+   
+   -> git rebase <branch_2>  ( It will commits all changes in branch_2 upto common ancestor ( with branch_1 ) )
+
+                             ( then it will commit changes in branch_1 to the integrated commit from branch_2 )
+
+    
