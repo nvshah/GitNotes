@@ -37,7 +37,9 @@
 
      git branch -va   ( list of all branches involving both local & remote with some more additional info. )
 
-     git branch -d <branch_name>  ( delete branch with given branch_name locally )
+     git branch -d <branch_name>  ( delete branch with given branch_name locally if changes are merged fully)
+     
+     git branch -D <branch_name>  ( delete branch with given branch_name locally, forcefully )
 
 
 5) Stashing : 
