@@ -239,6 +239,16 @@ REMEMBER : keep local and remote branch in sync i.e same naming convention at bo
   _________
  
   -> looks like development happened in straight line because merge commit works as if it was linear development betn 2 branch
+ 
+ 
+* Relative Ref & Moving :
+  ____________________
+  
+  ->   Moving upwards one commit at a time with ^
+       Moving upwards a number of times with ~<num>
+       
+       You can use branch or HEAD as a Relative ref
 
+  -> Move Branches Around : reassign branch to a commit with -f option i.e git branch -f master HEAD~3
  
   
