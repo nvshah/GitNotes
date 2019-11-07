@@ -40,7 +40,20 @@
      git branch -d <branch_name>  ( delete branch with given branch_name locally if changes are merged fully)
      
      git branch -D <branch_name>  ( delete branch with given branch_name locally, forcefully )
+     
+     git branch -f <source_bname> <HEAD~3>  ( moves master branch by force 3 parents behind, Moving) 
+     
+     
+12) Merging :
 
+   -> git merge <branch_name_to_merge_into_current_branch>  ( Merge given branchname into present (HEAD) branch )
+   
+   
+11) Rebasing : 
+   
+   -> git rebase <branch_2>  ( It will commits all changes in branch_2 upto common ancestor ( with branch_1 ) )
+
+                             ( then it will commit changes in branch_1 to the integrated commit from branch_2 )
 
 5) Stashing : 
 
@@ -57,7 +70,11 @@
   
   -> git checkout <branch_name>  ( switch to newly created branch ) 
   
+  -> git checkout -b <branch_name> ( create new branch & switch to newly created branch) 
+  
   -> git merge <branch_name_to_merge_in_current_working_copy_or_head_branch>
+  
+  -> git checkout <hash_or_starting_few_hashIdentifier_of_commit>  (detaching HEAD, making it point to commit instead of branch)
 
 
 7) Connecting Remote Repo : 
@@ -114,10 +131,6 @@
    -> git reset --hard
 
 
-11) Rebasing : 
-   
-   -> git rebase <branch_2>  ( It will commits all changes in branch_2 upto common ancestor ( with branch_1 ) )
 
-                             ( then it will commit changes in branch_1 to the integrated commit from branch_2 )
 
     
