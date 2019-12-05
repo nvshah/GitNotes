@@ -43,6 +43,10 @@
      
      git branch -f <source_bname> <HEAD~3>  ( moves master branch by force 3 parents behind, Moving) 
      
+     git branch -m <new_branch_name>  ( rename current pointed branch, locally )
+     
+     git branch -m <old_branch_name> <new_branch_name>  ( rename branch other than current Headed branch )
+     
      
 12) Merging :
 
