@@ -47,6 +47,11 @@
      
      git branch -m <old_branch_name> <new_branch_name>  ( rename branch other than current Headed branch )
      
+     git branch --unset-upstream   ( remove upstream branch for current local branch ) 
+     
+     git branch branch_name --set-upstream-to new_remote/branch_name  ( edit upstream of current branch )
+     
+     
      
 12) Merging :
 
@@ -103,6 +108,8 @@
      git pull <remote_repo_name> <remoteRepo_branch_name>  ( pull changes from remote server ) 
 
      git push <origin> --delete <branch_name_to_be_deleted_on_remote> ( delete branch on remote )  
+     
+     git push origin -u branch_to_be_setted_as_upstream  ( seeting )
 
 
 9) Publish a local branch :
