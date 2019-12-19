@@ -23,7 +23,10 @@
      git commit -m "commit Message Here" 
 
      git log   ( display commit history )
-
+     
+     git log --pretty=oneline --abbrev-commit ( display commit hash followed by commit name simply)
+     
+     git log --author='name_of_the_author' --pretty=oneline --abbrev-commit   
 
 4) branching : 
 
