@@ -24,9 +24,25 @@
 
      git log   ( display commit history )
      
+     git log --pretty=oneline   ( display commit in one line )
+     
+     git log --pretty=format:" " 
+     
      git log --pretty=oneline --abbrev-commit ( display commit hash followed by commit name simply)
      
      git log --author='name_of_the_author' --pretty=oneline --abbrev-commit   
+     
+     git log --graph   ( display logs in form of graph )
+     
+     git log -p -2     (Here p stands for patch, it will show changes amended 
+                             2 denotes latest 2 changes )
+                             
+     git log --since = 2.weeks                         ( get list of commit according to mentioned date or week or month)
+                     = "2008-01-15"
+                     = "2 years 1 day 3 minutes ago"   
+                     
+     git log --walk-reflogs branchName   ( get commit of that particular branch, avoiding commits from parent master )
+     
 
 4) branching : 
 
