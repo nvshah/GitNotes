@@ -159,6 +159,11 @@
    -> git merge --abort  ( return to state before starting merge )
 
    -> git reset --hard
+ 
+ 11) Find Number of commmit behind from Upstream
+ 
+   ->  git rev-list remotes/origin/Development..Development --count
+
 
 
 
