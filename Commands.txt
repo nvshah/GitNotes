@@ -129,6 +129,8 @@
      git push <origin> --delete <branch_name_to_be_deleted_on_remote> ( delete branch on remote )  
      
      git push origin -u branch_to_be_setted_as_upstream  ( seeting )
+     
+     git push -f <origin> branchName  ( force push )
 
 
 9) Publish a local branch :
