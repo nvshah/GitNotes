@@ -1,3 +1,5 @@
+Ref ( rebase_concept)  : https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history
+^^^^^^^^^^^^^^^^^^^^^s
 #BuzzWords For Git
 
 * What is Git ?
