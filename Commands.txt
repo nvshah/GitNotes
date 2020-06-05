@@ -43,6 +43,10 @@
                      
      git log --walk-reflogs branchName   ( get commit of that particular branch, avoiding commits from parent master )
      
+     git log mybranch --not $(git for-each-ref --format='%(refname)' refs/heads/ | grep -v "refs/heads/mybranch" 
+                                        ( get commit of that particular branch, avoiding commits from parent master )
+                                        [ When --walk-reflogs won't work ] -
+
 
 4) branching : 
 
@@ -166,7 +170,9 @@
  
    ->  git rev-list remotes/origin/Development..Development --count
 
-
+ 12) cherry - pick :
+ 
+   -> git cherry-pick commitHash  ( this will pick particular commit with hash & append it to current branch HEAD )
 
 
 
