@@ -86,6 +86,12 @@
    -> git rebase <branch_2>  ( It will commits all changes in branch_2 upto common ancestor ( with branch_1 ) )
 
                              ( then it will commit changes in branch_1 to the integrated commit from branch_2 )
+                             
+   -> git rebase --interactive HEAD~N   ( starts the interactive rebase, used to merge several commits into one ) 
+                or
+      git rebase -i HEAD~N                  N is the number of commits to Join
+      
+      git rebase -i commitHash
 
 5) Stashing : 
 
