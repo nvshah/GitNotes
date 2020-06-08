@@ -242,6 +242,10 @@ REMEMBER : keep local and remote branch in sync i.e same naming convention at bo
  
   -> looks like development happened in straight line because merge commit works as if it was linear development betn 2 branch
  
+  => Merge Several commits into one 
+     _____________________________
+     
+     -> interactive rebase - git rebase -i
  
 * Relative Ref & Moving :
   ____________________
