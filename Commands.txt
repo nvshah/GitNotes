@@ -179,6 +179,10 @@
  12) cherry - pick :
  
    -> git cherry-pick commitHash  ( this will pick particular commit with hash & append it to current branch HEAD )
+   
+ 13) Patching
+ 
+   -> git add --patch    ( commit chunks of code that are related to each other instead of bundeling everything in 1 commit )
 
 
 
